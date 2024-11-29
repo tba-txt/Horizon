@@ -1,0 +1,64 @@
+<div class="collection-point-edit-container">
+  <h1 class="collection-point-edit-title">Editar Perfil do Ponto de Coleta</h1>
+
+  <form action="/collection-point/profile/edit" method="POST" class="collection-point-edit-form">
+    <div>
+      <label for="name">Nome:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        value="{{collectionPoint.name}}"
+        required
+      />
+    </div>
+
+    <div>
+      <label for="cnpj">CNPJ:</label>
+      <input
+        type="text"
+        id="cnpj"
+        name="cnpj"
+        value="{{collectionPoint.cnpj}}"
+        required
+      />
+    </div>
+
+    <div>
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        value="{{collectionPoint.email}}"
+        required
+      />
+    </div>
+
+    <div>
+      <label for="cep">CEP:</label>
+      <input
+        type="text"
+        id="cep"
+        name="cep"
+        value="{{collectionPoint.cep}}"
+        required
+      />
+    </div>
+
+    <div>
+      <label for="address">Endereço:</label>
+      <input
+        type="text"
+        id="address"
+        name="address"
+        value="{{collectionPoint.address}}"
+        required
+      />
+    </div>
+
+    <button type="submit" class="collection-point-edit-submit-button">Salvar Alterações</button>
+  </form>
+
+  <a href="/collection-point/profile" class="collection-point-edit-back-link">Voltar para o Perfil</a>
+</div>

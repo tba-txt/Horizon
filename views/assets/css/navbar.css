@@ -1,0 +1,121 @@
+/* Estilos gerais para o navbar */
+.navbar {
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  background-color: #d33741;
+  width: 100%;
+  z-index: 1;
+  padding: 1%;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 4.5rem;
+  background-size: 100% 90%;
+  background-repeat: no-repeat;
+}
+
+/* Logo */
+.navbar__logo_a {
+  width: 20%;
+}
+
+.navbar__logo_img {
+  width: 100%;
+}
+
+/* Links */
+.navbar__links {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  height: 100%;
+}
+
+.navbar__link {
+  text-align: center;
+  padding-inline: 1rem;
+  border-style: none;
+  color: white;
+  height: 100%;
+  font-size: 1.25rem;
+  transition: all 0.2s;
+}
+
+.navbar__link:hover {
+  transform: scale(1.25);
+}
+
+/* Avatar */
+.navbar__avatar_container {
+  width: 10%;
+  display: flex;
+}
+
+/* Estilos para telas menores (responsividade) */
+@media (max-width: 1024px) {
+  .navbar {
+    padding-inline: 2rem;
+  }
+
+  .navbar__logo_a {
+    width: 25%;
+  }
+
+  .navbar__logo_img {
+    width: 100%;
+  }
+
+  .navbar__links {
+    display: none; /* Esconder os links na versão móvel */
+    width: 100%;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: transparent;
+    position: absolute;
+    top: 80px; /* Ajuste para ficar abaixo do navbar */
+    left: 0;
+    padding: 1rem;
+    z-index: 2;
+  }
+
+  .navbar__link {
+    padding: 1.5rem;
+    font-size: 1.25rem;
+    width: 100%;
+    text-align: left;
+    color: rgb(165, 1, 1);
+  }
+
+  .navbar__avatar_container {
+    width: 15%;
+  }
+
+  /* Mostrar um botão de menu em dispositivos menores */
+  .navbar__menu_toggle {
+    display: block;
+    font-size: 2rem;
+    color: rgb(243, 243, 243);
+    cursor: pointer; l
+  }
+
+  /* Mostrar links quando ativado */
+  .navbar__links.show {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar__logo_a {
+    width: 30%;
+  }
+
+  .navbar__link {
+    font-size: 1.5rem; /* Reduzir o tamanho da fonte dos links */
+    color: rgb(165, 1, 1);
+  }
+
+  .navbar__avatar_container {
+    width: 20%;
+  }
+}

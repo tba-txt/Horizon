@@ -1,0 +1,154 @@
+/* General Styles */
+.principal_contatos {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 7%;
+    gap: 3%;
+  }
+  
+  .area_contatos {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .card_contatos {
+    width: 90%;
+    gap: 3%;
+    padding: 3%;
+    margin: 1%;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    background-color: #ffffff;
+    border-radius: 21px;
+    box-shadow: 0px 3px 7px #00000040;
+  }
+  
+  .card_contatos i {
+    margin: 2.5%;
+    font-size: 300%;
+    color: #BB2029;
+  }
+  
+  /* FAQ Section Styles */
+  .faq {
+    width: 55%;
+    margin-top: 5%;
+    padding: 2%;
+  }
+  
+  .faq button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-style:none;
+    color: #BB2029;
+    font-size: 150%;
+    font-weight: 700;
+    padding: 1%;
+    font-family: "Roboto-Bold", Helvetica;
+  }
+  
+  .faq i {
+    font-size: 125%;
+  }
+  
+  .faq .card-header {
+    background-color: #ffffff;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  
+  .faq .card-body {
+    border-width: 1px;
+    border-color: #284F60;
+  }
+  
+  .faq .card {
+    border-style: none;
+    color: #284F60;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .principal_contatos {
+      flex-direction: column;
+      gap: 5%;
+      width: 95%;
+      margin-top: 10%;
+    }
+  
+    .area_contatos {
+      width: 100%;
+    }
+  
+    .faq {
+      width: 100%;
+      margin-top: 3%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .principal_contatos {
+      flex-direction: column;
+      gap: 5%;
+      width: 95%;
+      margin-top: 10%;
+    }
+  
+    .area_contatos {
+      width: 100%;
+    }
+  
+    .card_contatos {
+      width: 100%;
+      margin: 2%;
+    }
+  
+    .faq button {
+      font-size: 120%;
+      padding: 2%;
+    }
+  
+    .faq .card-body {
+      padding: 2%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card_contatos i {
+      font-size: 200%;
+    }
+  
+    .faq button {
+      font-size: 100%;
+    }
+  
+    .faq i {
+      font-size: 100%;
+    }
+  
+    .principal_contatos {
+      margin-top: 15%;
+    }
+  
+    .area_contatos {
+      width: 100%;
+    }
+  
+    .faq {
+      width: 100%;
+      margin-top: 3%;
+    }
+  }
+  

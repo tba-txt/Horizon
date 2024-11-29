@@ -1,0 +1,82 @@
+
+<div class="row">
+  <nav class="navbar navbar-expand-lg bg-body-danger" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Horizon</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/profile">Perfil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/screening">Agendar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/my-schedules">Meus Agendamentos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="profile-container">
+  <h3>Seu Perfil</h3>
+  <div class="profile-grid">
+    <div class="profile-item">
+      <p>Nome</p>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" disabled placeholder="name@example.com">
+        <label>{{user.name}}</label>
+      </div>
+    </div>
+    <div class="profile-item">
+      <p>Idade</p>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" disabled placeholder="Idade">
+        <label>{{user.idade}}</label>
+      </div>
+    </div>
+    <div class="profile-item">
+      <p>CPF</p>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" disabled placeholder="CPF">
+        <label>{{user.cpf}}</label>
+      </div>
+    </div>
+    <div class="profile-item">
+      <p>Email</p>
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" disabled placeholder="Email">
+        <label>{{user.email}}</label>
+      </div>
+    </div>
+    <div class="profile-item">
+      <p>Endereço</p>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" disabled placeholder="Endereço">
+        <label>{{user.address}}</label>
+      </div>
+    </div>
+    <div class="profile-item">
+      <p>CEP</p>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" disabled placeholder="CEP">
+        <label>{{user.cep}}</label>
+      </div>
+    </div>
+    <div class="profile-item">
+      <p>Tipo Sanguíneo</p>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" disabled placeholder="Tipo Sanguíneo">
+        <label>{{user.bloodType}}</label>
+      </div>
+    </div>
+  </div>
+  <div class="profile-actions">
+    <form action="/logout" method="POST">
+      <button type="submit" class="btn btn-danger">Sair</button>
+    </form>
+    <a href="/profile/edit" class="btn btn-primary">Editar Perfil</a>
+  </div>
+</div>

@@ -1,0 +1,217 @@
+<nav class="navbar">
+  <a href="/" class="navbar__logo_a">
+    <img src="/assets/images/logo.png" alt="Desenho da logo da Horizon, uma gota de sangue com Horizon escrito ao lado" class="navbar__logo_img" />
+  </a>
+
+  <!-- Menu Toggle Button (aparece em telas pequenas) -->
+  <div class="navbar__menu_toggle" id="menu-toggle">
+    <i class="fa fa-bars"></i>
+  </div>
+
+  <div class="navbar__links" id="navbar-links">
+    <a href="/" class="navbar__link">Home</a>
+    <a href="/mitos" class="navbar__link">Mitos</a>
+    <a href="/beneficios" class="navbar__link">Benefícios</a>
+    <a href="/contato" class="navbar__link">Contato</a>
+    <a href="/apoiadores" class="navbar__link">Apoiadores</a>
+  </div>
+
+  <div class="nav-item dropdown navbar__avatar_container">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i style="font-size: 250%; color: white" class="fa-regular fa-user"></i>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="/login">Login/Cadastro Doador</a></li>
+      <li><a class="dropdown-item" href="/collection-point/login">Login/Cadastro Ponto de Coleta</a></li>
+      <li><a class="dropdown-item" href="/login">Logout</a></li>
+      <li><a class='dropdown-item' href='/my-schedules'>Meus agendamentos</a></li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  // Mostrar/Esconder o menu em dispositivos móveis
+  const menuToggle = document.getElementById('menu-toggle');
+  const navbarLinks = document.getElementById('navbar-links');
+  
+  menuToggle.addEventListener('click', function() {
+    navbarLinks.classList.toggle('show');
+  });
+</script>
+
+<div class="apoia_corpo">
+    <div class="apoia_container">
+        <section style="margin-top: 6%;" class="apoia_doadores">
+            <h2>Doadores</h2>
+            <p>Sabemos que são inúmeros os benefícios de realizar uma doação de sangue ou de plaquetas! <br>
+        Além de você contribuir com o aumento da taxa de doadores no Brasil, você ainda pode salvar até 4 vidas
+        :) 
+        <br> <br>                                                                                                            
+        Podemos separar os benefícios de se realizar uma doação
+        em
+        dois tipos, sendo eles:
+        </p>
+        </section>
+
+    <div class="benef_centralizar">
+        <h6 class="benef_titulo-esquerda"> - Benefícios Sociais</h6>
+        <h6 class="benef_titulo-direita"> - Benefícios para sua Saúde</h6>
+    </div>
+
+
+    <section id="benef_topo">
+        <figure id="benef_mousse-esquerda">
+            <img src="assets/images/be_social.webp" />
+            <figcaption><strong class="benef_VaiPraDireita">Benefícios Sociais</strong>
+                <p>
+                    &nbsp;
+                </p>
+                <p>
+                    <strong>Isenção de Custos - </strong> A Lei nº 10.205, de 21 de março de 2001, estabelece a
+                    gratuidade da doação de sangue, proibindo qualquer forma de remuneração em troca do ato.
+                </p>
+                <p>
+                    <strong>Prioridade em Caso de Transfusão - </strong> Doadores têm prioridade no recebimento
+                    de
+                    sangue em casos de necessidade transfusional futura.
+                </p>
+                <p>
+                    <strong>Licença Remunerada - </strong> A legislação trabalhista concede aos doadores de
+                    sangue 1
+                    dia de ausência remunerada a cada 12 meses, conforme Lei nº 1.075/1950.
+                </p>
+                <p>
+                    <strong>Satisfação Pessoal - </strong> A doação de sangue proporciona uma sensação de
+                    realização
+                    por contribuir para salvar vidas e ajudar pessoas em necessidade.
+                </p>
+                <p>
+                    <strong>Prioridade - </strong> Em alguns estados, como São Paulo, doadores regulares têm
+                    direito
+                    à meia-entrada em eventos culturais, esportivos e de lazer realizados em locais públicos.
+                </p>
+            </figcaption>
+        </figure>
+        <figure id="benef_mousse-direita">
+            <img src="assets/images/coracao.png" />
+            <figcaption><strong class="benef_VaiPraDireita">Benefícios Para Sua Saúde</strong>
+                <p>&nbsp;</p>
+                <p><strong>Reduz o Risco de Doenças Cardíacas - </strong> Alguns estudos sugerem que a doação de
+                    sangue ajuda a reduzir o excesso de ferro no organismo, o que pode diminuir o risco de
+                    doenças
+                    cardiovasculares.</p>
+                <p><strong>Fornece um check-up de saúde - </strong> Antes de doar sangue, você passará por uma
+                    triagem que inclui verificações de pressão arterial, pulso e hemoglobina. Isso pode ajudar a
+                    identificar problemas de saúde subjacentes.</p>
+                <p><strong>Ajuda a salvar vidas - </strong> Cada doação pode beneficiar até quatro pessoas em
+                    situações de emergência, cirurgias, tratamentos de câncer e outras condições médicas graves.
+                </p>
+                <p><strong>Menor risco de câncer - </strong> Com a doação, há uma renovação das células, o que
+                    contribui para a redução dos riscos de desenvolver câncer no pulmão, fígado e garganta.</p>
+                <p><strong>Atendimento prioritário - </strong> Você vira prioridade em consultas médicas e
+                    odontológicas em hospitais do SUS ou em unidades ligadas a ele.</p>
+            </figcaption>
+        </figure>
+    </section>
+
+<hr class="apoia_separator">
+
+    <div class="benef_mitos"></div>
+
+    <p></p>
+    <div style="text-align: center;">
+        <h3>Requisitos para realizar uma doação</h3>
+        <p></p>
+    </div>
+
+    <p style="margin: 20px;">
+        Para poder doar sangue, é necessário atender a alguns requisitos, que certificam
+        a segurança de todo o processo. Tratam-se de aspectos para garantir que o sangue <br>
+        é seguro e não vai causar complicações a quem vai recebê-lo.
+    </p>
+
+    <p style="margin: 20px;">
+        Desse modo, antes de procurar uma unidade para doar, é preciso analisar os requisitos obrigatórios e
+        situações que impedem o procedimento. De acordo com o Ministério da Saúde, os principais requisitos para
+        ter
+        condições e doar sangue são os seguintes:
+    </p>
+    <h6 style="margin: 20px;">° ter entre 16 a 69 anos de idade;</h6>
+    <h6 style="margin: 20px;">° menores de idade deve estar acompanhados dos responsáveis;</h6>
+    <h6 style="margin: 20px;">° estar em boas condições de saúde;</h6>
+    <h6 style="margin: 20px;">° pesar mais do que 50 kg;</h6>
+    <h6 style="margin: 20px;">° intervalo entre doações de sangue de 90 dias para mulheres;</h6>
+    <h6 style="margin: 20px;">° intervalo de doação de 60 dias para homens;</h6>
+    <h6 style="margin: 20px;">° não estar em jejum;</h6>
+    <h6 style="margin: 20px;">° aguardar, pelo menos, 3 horas após almoçar ou jantar;</h6>
+    <h6 style="margin: 20px;">° não ter ingerido bebida alcoólica nas últimas 12 horas;</h6>
+    <h6 style="margin: 20px;">° não ter tido parto ou aborto há menos de 3 meses;</h6>
+    <h6 style="margin: 20px;">° não estar grávida ou amamentando;</h6>
+    <h6 style="margin: 20px;">° não ter realizado tatuagem ou maquiagem definitiva nos últimos 12 meses;</h6>
+    <h6 style="margin: 20px;">° não ter passado por endoscopia ou colonoscopia há menos de 6 meses;</h6>
+    <h6 style="margin: 20px;">° não ter piercing em cavidade oral ou região genital;</h6>
+    <h6 style="margin: 20px;">° não ter tido febre, infecção bacteriana ou gripe há menos de 15 dias;</h6>
+    <h6 style="margin: 20px;">° não ter fator de risco ou histórico de doenças infecciosas ou transmissíveis por transfusão;</h6>
+    <h6 style="margin: 20px;">° não ter tido malária;</h6>
+    <h6 style="margin: 20px;">° não ter feito uso de drogas ilícitas injetáveis;</h6>
+    <h6 style="margin: 20px;">° não ter diabetes, estar em uso de insulina ou fazendo tratamento para epilepsia;</h6>
+    <h6 style="margin: 20px;">° não ter visitado área endêmica ou ter contraído malária há menos de 1 ano.</h6>
+</section>
+
+    <hr class="apoia_separator">
+
+<div class="apoia_corpo">
+<div class="apoia_container">
+
+<div class="apoia_buttons">
+            <div class="apoia_button-container">
+                <p>Venha você também fazer história junto com a gente! Se torne um doador clicando no botão abaixo</p>
+                <a href="screening" class="apoia_button">Agendar Doação</a>
+            </div>
+            <div class="apoia_button-container2">
+                <p>Caso você possua interesse em saber mais sobre o software HORIZON e sobre como se tornar uma das
+                    instituições cadastradas, clique no botão abaixo</p>
+                <a href="collection-point/signup" class="apoia_button apoia_red">Quero me cadastrar como instituição</a>
+            </div>
+        </div>
+
+</div>
+</div>
+
+    <footer class="benef_footer">
+      <div style="width: 90%;">
+        <h1>HORIZON</h1>
+        <div class="benef_div_a">
+          <a href=""
+            style="border-style: none none none solid; border-width: 1px; padding-left: 1%; width: 33%; color: white;">
+            Apoiadores
+          </a>
+          <a href=""
+            style="border-style: none none none solid; border-width: 1px; padding-left: 1%; width: 33%; color: white;">
+            Noticias sobre doação
+          </a>
+          <a href=""
+            style="border-style: none none none solid; border-width: 1px; padding-left: 1%; width: 33%; color: white;">
+            Benefícios
+          </a>
+        </div>
+        <div style="border-style: none;" class="benef_div_a">
+          <a href="/agendamento"
+            style="border-style: none none none solid; border-width: 1px; padding-left: 1%; width: 33%; color: white;">
+            Quero fazer uma doação!
+          </a>
+          <a href=""
+            style="border-style: none none none solid; border-width: 1px; padding-left: 1%; width: 33%; color: white;">
+            Meios de contato
+          </a>
+          <a href=""
+            style="border-style: none none none solid; border-width: 1px; padding-left: 1%; width: 33%; color: white;">
+            Perguntas frequentes
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+
+</div>

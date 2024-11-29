@@ -1,0 +1,40 @@
+<div class="edit-profile-container">
+  <div class="row">
+    <form action='/collection-point/signup' method='POST'>
+            <h3>Crie seu perfil de instituição!</h3>
+       <div class="profile-item">
+        <label for='name'>Nome:</label>
+        <input class="form-control" type='text' id='name' name='name' required />
+       </div>
+
+      <div class="profile-item">
+        <label for='cnpj'>CNPJ:</label>
+        <input class="form-control" type='text' id='cnpj' name='cnpj' required />
+      </div>
+
+      <div class="profile-item">
+        <label for='email'>Email:</label>
+        <input class="form-control" type='email' id='email' name='email' required />
+      </div>
+
+      <div class="profile-item">
+        <label for='password'>Senha:</label>
+        <input class="form-control" type='password' id='password' name='password' required />
+      </div>
+
+      <div class="profile-item">
+        <label for='cep'>CEP:</label>
+        <input class="form-control" type='text' id='cep' name='cep' required />
+      </div>
+
+      <div class="profile-item">
+        <label for='address'>Endereço:</label>
+        <input class="form-control" type='text' id='address' name='address' required />
+      </div>
+
+      <button type='submit' class="btn btn-primary">Cadastrar</button>
+    </form>
+
+    <button href="/collection-point/login" class="btn btn-danger">Voltar</button>
+  </div>
+</div>

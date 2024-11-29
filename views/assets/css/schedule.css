@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.agend__body {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.agend_agendamento, .agend_horario-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8.5%;
+}
+
+.agend_fotos, .agend_mapa, .agend_quadrado {
+    display: flex;
+    background-color: rgb(163, 163, 163);
+    border-radius: 20px;
+    padding: 12px;
+    margin: 20px;
+}
+
+.mapa-iframe {
+    width: 100%; 
+    height: 200px;
+    border: 0; 
+    border-radius: 10px; 
+    max-width: 400px; 
+    margin: 0 auto; 
+  }
+  
+
+.agend_left-column, .agend_right-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.agend_left-column img, .agend_right-column img {
+    height: 360px;
+    width: 430px;
+    border-radius: 30px;
+}
+
+.agend_left-column h2, .agend_right-column {
+    color: #D33741;
+}
+
+.agend_horario-buttons button {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.agend_input_quadrado, .agend_input_mapa {
+    width: 80%;
+    border-radius: 34px;
+    border: 1px solid;
+    margin-top: -4%;
+}
+
+.agend_principal {
+    width: 60%;
+    height: fit-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 24px;
+    box-shadow: 4px 2px 7px #00000040;
+    background-color: #C2E0E0;
+}
+
+.agend_navbar1 {
+    height: fit-content;
+    position: fixed;
+    background-color: #D33741;
+    width: 100%;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.agend_botoes_nav {
+    text-align: center;
+    width: 15%;
+    color: white;
+}
+
+.agend_footer {
+    width: 100%;
+    padding: 3%;
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.agend_banco_sangue {
+    padding: 2%;
+    background-color: #345688;
+    box-shadow: 4px 2px 7px #00000040;
+    opacity: 0.81;
+    width: 80%;
+    align-self: center;
+    border-radius: 34px;
+}
+
+.agend_card_carrossel {
+    background-color: #E4E4E4;
+    box-shadow: 4px 2px 7px #00000040;
+    padding: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.agend_patrocinadores {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: solid 10px #346F88;
+}
+
+.agend_card_patrocinador {
+    width: 20%;
+    padding: 3%;
+}
+
+html {
+    --body-color: #FFFCFF;
+    --header-color: #d36c6c;
+    --header-button: #92a1d1;
+    --color-day: white;
+    --box-shadow: #CBD4C2;
+}
+
+.agend_main h1 {
+    color: #BB2029;
+    margin: 0 0 7%;
+}
+
+.agend_button {
+    width: 75px;
+    cursor: pointer;
+    padding: 5px;
+    color: white;
+}
+
+.agend_calendar {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.agend_day {
+    width: 97.5px;
+    padding: 1%;
+    height: 97.5px;
+    cursor: pointer;
+    background-color: var(--color-day);
+    margin: 5px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: 700;
+    color: rgb(0, 81, 221);
+    font-size: 32px;
+}
+
+.agend_event {
+    font-size: 10px;
+    padding: 3px;
+    background-color: var(--event-color);
+    color: white;
+    border-radius: 5px;
+}
+
+.agend_modalBackDrop {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.schedule__submit_button {
+    background-color: #D33741;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 8px;
+    color: #FFF;
+}
+
+
+
+
+.schedule__error_modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); 
+  }
+  
+  .schedule__error_modal .modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 80%;
+    text-align: center;
+  }
+  
+  .schedule__error_modal .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .schedule__error_modal .close:hover,
+  .schedule__error_modal .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  

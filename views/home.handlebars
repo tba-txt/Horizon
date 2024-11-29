@@ -1,0 +1,439 @@
+<nav class="navbar">
+  <a href="/" class="navbar__logo_a">
+    <img src="/assets/images/logo.png" alt="Desenho da logo da Horizon, uma gota de sangue com Horizon escrito ao lado" class="navbar__logo_img" />
+  </a>
+
+  <!-- Menu Toggle Button (aparece em telas pequenas) -->
+  <div class="navbar__menu_toggle" id="menu-toggle">
+    <i class="fa fa-bars"></i>
+  </div>
+
+  <div class="navbar__links" id="navbar-links">
+    <a href="/" class="navbar__link">Home</a>
+    <a href="/mitos" class="navbar__link">Mitos</a>
+    <a href="/beneficios" class="navbar__link">Benefícios</a>
+    <a href="/contato" class="navbar__link">Contato</a>
+    <a href="/apoiadores" class="navbar__link">Apoiadores</a>
+  </div>
+
+  <div class="nav-item dropdown navbar__avatar_container">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i style="font-size: 250%; color: white" class="fa-regular fa-user"></i>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="/login">Login/Cadastro Doador</a></li>
+      <li><a class="dropdown-item" href="/collection-point/login">Login/Cadastro Ponto de Coleta</a></li>
+      <li><a class="dropdown-item" href="/login">Logout</a></li>
+      <li><a class='dropdown-item' href='/my-schedules'>Meus agendamentos</a></li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  // Mostrar/Esconder o menu em dispositivos móveis
+  const menuToggle = document.getElementById('menu-toggle');
+  const navbarLinks = document.getElementById('navbar-links');
+  
+  menuToggle.addEventListener('click', function() {
+    navbarLinks.classList.toggle('show');
+  });
+</script>
+  <main class="principal_home">
+    <!--CARROSSEL-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="assets/images/Banner.png" alt="Primeiro Slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="assets/images/doacao-de-sangue.png" alt="Segundo Slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="assets/images/doar-sangue-1.jpg" alt="Terceiro Slide">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Próximo</span>
+      </a>
+    </div>
+
+    <!--LOCAIS PARA DOACAO-->
+    <div class="home_locais_doacao">
+      <div style="width: 50%; display: flex; flex-direction: column; text-align: center; padding: 5%;">
+        <h3>Locais para Doação</h3>
+        <p style="font-weight: 600; margin-top: 5%; width:fit-content">
+          O agendamento é 100% seguro e eficiente! Primeiro você escolhe a unidade mais próxima,
+          passa pelo nosso sistema de triagem eletrônica, escolha a data disponível e pronto! :)
+        </p>
+      </div>
+ 
+      <div style="width: fit-content; padding: 5%; display: flex; flex-direction: column; align-items: center;">
+        <div class="home_mapa">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.313606745895!2d-46.65507983151243!3d-23.557177686295105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59cba16aab73%3A0xc507935c3fc44731!2sHospital%20S%C3%ADrio-Liban%C3%AAs%20%7C%20Bela%20Vista!5e0!3m2!1spt-BR!2sbr!4v1718240863175!5m2!1spt-BR!2sbr"
+            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          alt="mapa">
+        </div>
+      </div>
+    </div>
+
+    <!--BANCO DE SANGUE-->
+<div class="home_banco_sangue">
+  <h5>Banco de sangue convêniado</h5>
+  <div style="width: 90%; display: flex; justify-content: space-between; text-align: center;">
+    <div class="home_boleta_sangue home_boleta_sangue_edit">
+      <img src="assets/images/estavel.png" alt="estavel" class="sangue1">
+      <p class="sangue1">A+</p>
+    </div>
+    <div class="home_boleta_sangue home_boleta_sangue_edit">
+      <img src="assets/images/critico.png" alt="critico" class="sangue2">
+      <p class="sangue2">A-</p>
+    </div>
+    <div class="home_boleta_sangue home_boleta_sangue_edit">
+      <img src="assets/images/estavel.png" alt="estavel" class="sangue3">
+      <p class="sangue3">B+</p>
+    </div>
+    <div class="home_boleta_sangue home_boleta_sangue_edit">
+      <img src="assets/images/alerta.png" alt="alerta" class="sangue4">
+      <p class="sangue4">B-</p>
+    </div>
+    <div class="home_boleta_sangue home_boleta_sangue_edit">
+      <img src="assets/images/estavel.png" alt="estavel" class="sangue5">
+      <p class="sangue5">AB+</p>
+    </div>
+    <div class="home_boleta_sangue home_boleta_sangue_edit">
+      <img src="assets/images/alerta.png" alt="alerta" class="sangue6">
+      <p class="sangue6">AB-</p>
+    </div>
+    <div class="home_boleta_sangue home_boleta_sangue_edit">
+      <img src="assets/images/critico.png" alt="critico" class="sangue7">
+      <p class="sangue7">O+</p>
+    </div>
+    <div class="home_boleta_sangue home_boleta_sangue_edit">
+      <img src="assets/images/alerta.png" alt="alerta" class="sangue8">
+      <p class="sangue8">O-</p>
+    </div>
+  </div>
+
+      <div style="width: 90%; display: flex; flex-direction: row; justify-content: space-around; text-align: center;">
+        <div class="home_boleta_sangue">
+          <img style="max-width: 55%;" src="assets/images/estavel.png" alt="" class="san1">
+          <p>Estável</p>
+        </div>
+        <div class="home_boleta_sangue">
+          <img style="max-width: 55%;" src="assets/images/alerta.png" alt="" class="san2">
+          <p>Alerta</p>
+        </div>
+        <div class="home_boleta_sangue">
+          <img style="max-width: 55%;" src="assets/images/critico.png" alt="" class="san3">
+          <p>Crítico</p>
+        </div>
+      </div>
+    </div>
+    <a style="align-self: center;" href="screening">
+      <button style="background-color: #D33741; margin-top: 3%; width: 200px; align-self: center;" class="home_botoes">
+        Agendar Doação
+      </button>
+    </a>
+
+    <!--CARDS EM CARROSSEL-->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active home_extra_padding">
+          <div class="home_banco_sangue home_card_carrossel">
+            <span style="width: 150px; height: 150px;" class="home_boleta"></span>
+            <div style="width: 70%; display: flex; flex-direction: column;">
+              <h1>Gabriel Oliveira da Silva</h1>
+              <p>Eu fui um dos primeiros a utilizar o HORIZON. Realizei uma doação de plaquetas. A agilidade em
+                comparação com outros sistemas é realmente gritante!</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item home_extra_padding">
+          <div class="home_banco_sangue home_card_carrossel">
+            <span style="width: 150px; height: 150px;" class="home_boleta"></span>
+            <div style="width: 70%; display: flex; flex-direction: column;">
+              <h1>Matheus Domingues Nunes</h1>
+              <p>Eu fico muito feliz de contribuir para uma causa tão nobre! Em busca de mais 4 "obrigados" :)!</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item home_extra_padding">
+          <div class="home_banco_sangue home_card_carrossel">
+            <span style="width: 150px; height: 150px;" class="home_boleta"></span>
+            <div style="width: 70%; display: flex; flex-direction: column;">
+              <h1>Brenno Ribeiro da Silva</h1>
+              <p>Já fiz diversas doações utilizando o HORIZON, ele é um dos melhores sistemas para doação de sangue!!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="collection-point/login" class="collection"
+      style="z-index: 1; text-align: center; width: 30%; padding: 0.75%; border-radius: 32px; background-color: #284F60; color: white; border-style: none; align-self: flex-end; margin: 10%; margin-top: -3%;">
+      Quero me cadastrar como instituição
+    </a>
+
+<div class="Quizz">
+    <div id="quiz-container">
+    <h1>Quiz Horizon</h1>
+    <p>Vamos descobrir se você sabe tudo sobre a Horizon e sobre a doação de sangue no Brasil!</p>
+    <div id="question-box">
+      <p id="question">Aqui vai a pergunta</p>
+      <div id="options">
+        <button class="option-btn" onclick="checkAnswer(0)">Opção 1</button>
+        <button class="option-btn" onclick="checkAnswer(1)">Opção 2</button>
+        <button class="option-btn" onclick="checkAnswer(2)">Opção 3</button>
+        <button class="option-btn" onclick="checkAnswer(3)">Opção 4</button>
+      </div>
+    </div>
+    <p id="score">Pontuação: 0</p>
+    <button id="next-btn" onclick="restartQuiz()">Reiniciar Quiz</button>
+  </div>
+</div>
+
+    <!--PATROCINADORES-->
+    <div class="home_patrocinadores">
+      <div class="home_card_patrocinador">
+        <img src="assets/images/logos/unimed.png" class="imagem_div" alt="unimed">
+      </div>
+      <div class="home_card_patrocinador">
+        <img src="assets/images/logos/amil.png" class="imagem_div" alt="unimed">
+      </div>
+      <div class="home_card_patrocinador">
+        <img src="assets/images/logos/SulAmerica.png" class="imagem_div" alt="unimed">
+      </div>
+      <div class="home_card_patrocinador">
+        <img src="assets/images/logos/saocamilo.png" class="imagem_div" alt="unimed">
+      </div>
+      <div class="home_card_patrocinador">
+        <img src="assets/images/logos/allianz.png" class="imagem_div" alt="unimed">
+      </div>
+    </div>
+
+    <footer class="benef_footer">
+      <div style="width: 90%;">
+        <h1>HORIZON</h1>
+        <div class="benef_div_a">
+          <a href="apoiadores"
+            style="border-style: none none none solid; border-width: 1px; padding-left: 1%; width: 33%; color: white;">
+            Apoiadores
+          </a>
+          <a href="mitos"
+            style="border-style: none none none solid; border-width: 1px; padding-left: 1%; width: 33%; color: white;">
+            Noticias sobre doação
+          </a>
+          <a href="beneficios"
+            style="border-style: none none none solid; border-width: 1px; padding-left: 1%; width: 33%; color: white;">
+            Benefícios
+          </a>
+        </div>
+        <div style="border-style: none;" class="benef_div_a">
+          <a href="screening"
+            style="border-style: none none none solid; border-width: 1px; padding-left: 1%; width: 33%; color: white;">
+            Quero fazer uma doação!
+          </a>
+          <a href="contato"
+            style="border-style: none none none solid; border-width: 1px; padding-left: 1%; width: 33%; color: white;">
+            Meios de contato
+          </a>
+          <a href="contato"
+            style="border-style: none none none solid; border-width: 1px; padding-left: 1%; width: 33%; color: white;">
+            Perguntas frequentes
+          </a>
+        </div>
+      </div>
+    </footer>
+
+<div id="home-modal" class="home-modal" style="display: none;">
+  <div class="home-modal-box">
+    <span class="home-modal-close">&times;</span>
+    <h2 class="home-modal-title"></h2>
+    <p class="home-modal-message"></p>
+    <button onclick="restartQuiz()">Reiniciar Quiz</button>
+   <a href="screening" class="btn-agendar-doacao">Agendar Doação</a>
+  </div>
+</div>
+
+
+  </main>
+
+
+  <script>
+
+const questions = [
+  {
+    question: "Posso doar sangue estando...",
+    options: ["Gripado", "Saudável", "Após fazer limpeza dentária", "5 dias após ser curado de SARS COV-2"],
+    correct: 1
+  },
+  {
+    question: "Qual é a porcentagem de doadores ativos de sangue hoje no Brasil?",
+    options: ["8,5%", "1,4%", "1,9%", "4,5%"],
+    correct: 1
+  },
+    {
+    question: "Um dos maiores mitos que contribui para que pessoas não doem sangue é:",
+    options: ["Quem tem tatuagem não pode doar", "Doar sangue é fora de moda", "Doar sangue fere a constituição", "Pessoas com +70 não podem doar"],
+    correct: 0
+  },
+    {
+    question: "Dado um período de 12 meses, quantas vezes um homem saudável pode doar sangue?",
+    options: ["2", "4", "6", "1"],
+    correct: 2
+  },
+    {
+    question: "Qual destes é um beneficio do doador de sangue?",
+    options: ["Pode folgar sempre que doar", "Recebe um Check-up completo de saúde ao doar", "Se sente mais forte após a doação", "Sempre recebe um lanche de sua escolha após a doação"],
+    correct: 1
+  },
+    {
+    question: "Quantas vezes por semana você pode encaminhar dúvidas para a equipe HORIZON?",
+    options: ["Ilimitado", "2", "9", "15"],
+    correct: 0
+  },
+    {
+    question: "Até quantas vidas podem ser salvas apenas com uma doação de sangue?",
+    options: ["No maximo 2", "No maxímo 4", "Até 3", "6 ou mais"],
+    correct: 1
+  },
+    {
+    question: "No Brasil, qual é a faixa etaria para realizar doações de sangue?",
+    options: ["Entre 18 e 69 anos", "Entre 17 e 60 anos", "Entre 13 e 70 anos", "Entre 16 e 69 anos"],
+    correct: 3
+  },
+    {
+    question: "O intervalo entre doações de sangue para homens e mulheres é igual",
+    options: ["Errado: Para homens o intervalo é de 60 dias, enquanto para mulheres é de 90 dias", "Correto", "Errado: Para homens o intervalo é de 90 dias, enquanto para mulheres é de 120 dias", "Errado: Para homens o intervalo é de 30 dias, enquanto para mulheres é de 20 dias"],
+    correct: 0
+  },
+  {
+    question: "Outro beneficio legal de doar sangue regularmente é:",
+    options: ["Ganhar um emblema de doador de sangue", "Ser visto como um herói", "Ser prioridade em caso de transfusão e ajudar a sociedade como um todo", "Receber um valor anual do governo"],
+    correct: 2
+  }
+];
+
+function shuffleOptions(question) {
+  const options = question.options.map((option, index) => ({ option, index }));
+  options.sort(() => Math.random() - 0.5); // Embaralha as opções
+  question.options = options.map(item => item.option);
+  question.correct = options.findIndex(item => item.index === question.correct); // Atualiza o índice correto
+}
+
+questions.forEach(shuffleOptions);
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+function loadQuestion() {
+  const questionBox = document.getElementById("question");
+  const options = document.querySelectorAll(".option-btn");
+
+  // Atualiza a pergunta atual
+  questionBox.textContent = questions[currentQuestionIndex].question;
+
+  // Atualiza as opções
+  questions[currentQuestionIndex].options.forEach((option, index) => {
+    options[index].textContent = option;
+  });
+}
+
+function checkAnswer(selectedOption) {
+  const options = document.querySelectorAll(".option-btn");
+  const correctOption = questions[currentQuestionIndex].correct;
+
+  // Verifica se a resposta é correta
+  if (selectedOption === correctOption) {
+    options[selectedOption].style.backgroundColor = "green"; // Resposta correta
+    score++; // Incrementa a pontuação
+    document.getElementById("score").textContent = `Pontuação: ${score}`;
+  } else {
+    options[selectedOption].style.backgroundColor = "#8f0404"; // Resposta errada
+    options[correctOption].style.backgroundColor = "green"; // Mostra a correta
+  }
+
+
+  setTimeout(() => {
+    options.forEach(option => (option.style.backgroundColor = "")); 
+    nextQuestion();
+  }, 600); // 1 segundo de espera
+}
+
+function nextQuestion() {
+  currentQuestionIndex++;
+  if (currentQuestionIndex < questions.length) {
+    loadQuestion();
+  } else {
+    showResult(); // Mostra o modal no final do quiz
+  }
+}
+
+function showResult() {
+  // Atualizando os IDs para corresponder ao novo CSS
+  const modal = document.getElementById("home-modal");
+  const resultTitle = document.querySelector(".home-modal-title");
+  const resultMessage = document.querySelector(".home-modal-message");
+
+  if (score == 0) {
+    resultTitle.textContent = "Puxa, bem... estude mais o nosso site!";
+    resultMessage.textContent = `${score} Você não acertou nenhuma das questões... Mas não desanime! Conheça mais sobre o nosso site acessando as abas de Beneficios, Mitos e Apoiadores! Após isso, tente novamente :)`;
+  } else if (score <= 3) {
+    resultTitle.textContent = "'Em evolução'";
+    resultMessage.textContent = `Você acertou apenas ${score} das perguntas. Mas sem desanimo! Sabia que todas as respostas estão espalhadas pelo nosso site? Explore o site Horizon e depois tente novamente! :D`;
+  } else if (score <= 6) {
+    resultTitle.textContent = "Quase lá!";
+    resultMessage.textContent = `Você acertou ${score} perguntas. Muito bem, mas continue lendo o site HORIZON para descobrir todas as respostas! Continue praticando e depois tente novamente!`;
+  } else if (score <= 9) {
+    resultTitle.textContent = "Você é incrível, passou perto!";
+    resultMessage.textContent = `Você acertou ${score} perguntas. Você está próximo da perfeição! Continue explorando o nosso site para descobrir todas as respostas. Após isso, tente novamente :)`;
+  } else {
+    resultTitle.textContent = "CAMPEÃO!!!";
+    resultMessage.textContent = `Parabéns! Você acertou todas as ${score} perguntas! Que tal acertar mais uma agendando a sua doação de sangue? Não deixe para depois! 4 pessoas podem estar esperando ansiosamente pela sua doação :)`;
+  }
+
+  modal.style.display = "flex";
+}
+
+function closeModal() {
+  const modal = document.getElementById("home-modal"); // Atualizado o ID
+  modal.style.display = "none";
+}
+
+function restartQuiz() {
+  currentQuestionIndex = 0;
+  score = 0;
+  document.getElementById("score").textContent = `Pontuação: ${score}`;
+  closeModal();
+  loadQuestion();
+}
+
+// Carrega a primeira pergunta ao iniciar
+loadQuestion();
+
+
+  </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
+</div>

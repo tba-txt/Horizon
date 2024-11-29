@@ -1,0 +1,47 @@
+.collection-point-profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 200px;
+  }
+  
+  .collection-point-profile-title {
+    text-align: center;
+    color: #cc0000;
+    margin-bottom: 20px;
+  }
+  
+  .collection-point-profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+  }
+  
+  .collection-point-profile-info p {
+    margin: 0;
+  }
+  
+  .collection-point-profile-info strong {
+    color: #555;
+  }
+  
+  .collection-point-profile-edit-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #cc0000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+  
+  .collection-point-profile-edit-link:hover {
+    background-color: #990000;
+  }
+  

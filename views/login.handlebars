@@ -1,0 +1,35 @@
+<div class='login__container'>
+  <div class='login__wrapper'>
+    <img src='/assets/images/drop-hand.png' alt='' />
+    <h1>Entre na sua conta</h1>
+    <h2 class="login__user_type">Doador de sangue</h2>
+
+    <form action='/login' method='POST' class='login__form'>
+      <div class='login__form_input_container'>
+        <input type='email' name='email' placeholder='E-mail' required />
+      </div>
+
+      <div class='login__form_input_container'>
+        <input type='password' name='senha' placeholder='Senha' required />
+      </div>
+
+      <div class='login__form_check_container'>
+        <div>
+          <input type='checkbox' />
+          <a>Lembrar senha</a>
+        </div>
+        <div>
+          <a href='/forgot-password'>Esqueci a minha senha</a>
+        </div>
+      </div>
+
+      <button type='submit' class='login__form_confirm_button'>Entrar</button>
+      <a class='login__link_to_signup' href='/signup'>Não possui cadastro?
+        Clique aqui</a>
+
+      <a class='login__link_to_signup' href='/collection-point/login'>É ponto de coleta?
+      Clique aqui</a>
+
+    </form>
+  </div>
+</div>

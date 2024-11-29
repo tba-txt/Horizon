@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Suporte</title>
+   <link rel="stylesheet" href="/assets/css/Suporte.css"/>
+    <link rel="stylesheet" href="/assets/css/Chamados.css"/>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="apple-touch-icon" sizes="180x180" href="/views/assets/images/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="/views/assets/images/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="/views/assets/images/favicon-16x16.png">
+   <link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+<body>
+  <div class=''>
+  <nav class='navbar'>
+    <a href='' class='navbar__logo_a'>
+      <img
+        src='/assets/images/logo.png'
+        alt='Desenho da logo da Horizon, uma gota de sangue com Horizon escrito ao lado'
+        class='navbar__logo_img'
+      /></a>
+
+    <div class='nav-item dropdown navbar__avatar_container'>
+      <a
+        class='nav-link dropdown-toggle'
+        href='#'
+        id='navbarDropdownMenuLink'
+        role='button'
+        data-bs-toggle='dropdown'
+        aria-expanded='false'
+      >
+        <i style='font-size: 250%; color: white' class='fa-regular fa-user'></i>
+      </a>
+      <ul class='dropdown-menu'>
+      <li><a class="dropdown-item" href="/suporte">Inicio</a></li>
+      <li><a class="dropdown-item" href="/Chamados">Chamados</a></li>
+      <li><a class="dropdown-item" href="/login">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+
+
+  <div id="futuro" class="futuro-container">
+    <img src="assets/images/Futuro.png" alt="Construímos o futuro juntos" class="futuro-img" />
+  </div>
+
+  <section id="carrossel">
+    <figure id="futuro">
+        <figcaption>
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/assets/images/Indicador 1.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/images/Indicador 2.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/images/Indicador 3.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </figcaption>
+    </figure>
+  </section>
+
+  <div id="chamados" class="chamados-container"></div>
+    <img class="chamados-img" alt="Verifique seus chamados" src="/assets/images/Break.png">
+  </div>
+
+  <div class="retangulo">
+    <p><strong>Relatórios Horizon</strong></p>
+  </div>
+
+
+  <div class="retangulo2">
+    <div class="container">
+      <div class="retangulo-menor">
+        <div class="texto-relatorio">Total de usuários cadastrados</div>
+        <button class="botao" onclick="totalUsuarios()">Gerar relatório</button>
+        </div>
+        <div class="retangulo-menor">
+            <div class="texto-relatorio">Usuarios com mais doações realizadas</div>
+            <button class="botao" onclick="mostrarUsuariosTop()">Gerar relatório</button>
+        </div>
+        <div class="retangulo-menor">
+            <div class="texto-relatorio">Tipos sanguíneos com menor incidência</div>
+            <button class="botao" onclick="tiposMenosDoacoes()">Gerar relatório</button>
+        </div>
+        <div class="retangulo-menor">
+            <div class="texto-relatorio">Faixa etária de usuários</div>
+            <button class="botao2" onclick="faixaEtaria()">Gerar Relatório</button>
+        </div>
+        <div class="retangulo-menor">
+            <div class="texto-relatorio">Hospitais cadastrados</div>
+            <button class="botao" onclick="totalHospitais()">Gerar relatório</button>
+        </div>
+        <div class="retangulo-menor">
+            <div class="texto-relatorio">Quantidade de doações</div>
+            <button class="botao" onclick="totalAgendamentos()">Gerar relatório</button>
+        </div>
+      </div>
+  </div>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="fecharModal()">&times;</span>
+    <p id="modalText"></p>
+  </div>
+</div>
+
+
+
+  <div id="footer" class="footer">
+    <img class="footer" alt="Footer da pagina" src="/assets/images/footer.png"/>
+  </div>
+
+
+<script src="/assets/js/scripts.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

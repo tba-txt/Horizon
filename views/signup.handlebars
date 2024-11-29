@@ -1,0 +1,144 @@
+<div class='signup__container'>
+  <div class='signup__wrapper'>
+    <aside class='signup__login_link_container'>
+      <img src='/assets/images/drop-hand.png' alt='' />
+      <h2>Bem-vindo novamente!</h2>
+      <p>
+        Já possui uma conta?<br />
+        Acesse-a agora mesmo
+      </p>
+      <a href='/login'>
+        <button>Entrar</button>
+      </a>
+    </aside>
+
+    <form
+      action='/signup'
+      method='POST'
+      class='signup__form_container'
+      id='signupForm'
+    >
+      <div class='signup__form_header'>
+        <h2>Crie sua conta</h2>
+        <p>Preencha com os seus dados</p>
+      </div>
+
+      <div class='signup__form'>
+        <div class='signup__form_input_container'>
+          <input
+            type='text'
+            placeholder='Nome'
+            class='signup__form_input_big'
+            id='nome'
+            name='nome'
+            required
+          />
+          <input
+            type='text'
+            placeholder='Insira sua data de nascimento (dd/mm/aaaa)'
+            id='dataNascimento'
+            name='dataNascimento'
+            required
+            pattern='\d{2}/\d{2}/\d{4}'
+            title='Data no formato dd/mm/aaaa'
+          />
+
+          {{!--
+<input type='number' placeholder='Idade' id='idade' name='idade' required />
+--}}
+
+          <input type='text' placeholder='CPF' id='cpf' name='cpf' required />
+        </div>
+
+        <div class='signup__form_input_container'>
+          <input
+            type='email'
+            placeholder='E-mail'
+            id='email'
+            name='email'
+            required
+          />
+        </div>
+
+        <div class='signup__form_input_container'>
+          <input
+            type='text'
+            placeholder='Endereço'
+            class='signup__form_input_big'
+            id='endereco'
+            name='endereco'
+            required
+          />
+          <input type='text' placeholder='CEP' id='cep' name='cep' required />
+        </div>
+
+        <div class='signup__form_radio_container'>
+          <label>Selecione seu tipo sanguíneo:</label>
+          <div class='signup__form_radio'>
+            <div>
+              <label for='A+'>A+</label>
+              <input type='radio' id='A+' name='tipo_sanguineo' value='A+' />
+            </div>
+            <div>
+              <label for='A-'>A-</label>
+              <input type='radio' id='A-' name='tipo_sanguineo' value='A-' />
+            </div>
+            <div>
+              <label for='B+'>B+</label>
+              <input type='radio' id='B+' name='tipo_sanguineo' value='B+' />
+            </div>
+            <div>
+              <label for='B-'>B-</label>
+              <input type='radio' id='B-' name='tipo_sanguineo' value='B-' />
+            </div>
+            <div>
+              <label for='AB+'>AB+</label>
+              <input type='radio' id='AB+' name='tipo_sanguineo' value='AB+' />
+            </div>
+            <div>
+              <label for='AB-'>AB-</label>
+              <input type='radio' id='AB-' name='tipo_sanguineo' value='AB-' />
+            </div>
+            <div>
+              <label for='O+'>O+</label>
+              <input type='radio' id='O+' name='tipo_sanguineo' value='O+' />
+            </div>
+            <div>
+              <label for='O-'>O-</label>
+              <input type='radio' id='O-' name='tipo_sanguineo' value='O-' />
+            </div>
+          </div>
+        </div>
+
+        <p>
+          Use oito ou mais caracteres com uma combinação de letras, números e
+          símbolos.
+        </p>
+
+        <div class='signup__form_input_container'>
+          <input
+            type='password'
+            placeholder='Senha'
+            id='senha'
+            name='senha'
+            required
+          />
+
+          <input
+            type='password'
+            placeholder='Confirmar Senha'
+            id='confirmarSenha'
+            name='confirmarSenha'
+            required
+          />
+        </div>
+        <span id='senhaError' class='signup__error_message'></span>
+        <span id='confirmarSenhaError' class='signup__error_message'></span>
+
+        <button type='submit' class='signup__form_confirm_button'>
+          Cadastrar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

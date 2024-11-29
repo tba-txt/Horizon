@@ -1,0 +1,145 @@
+.apoia_corpo { 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.apoia_container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+.apoia_doadores {
+    text-align: center;
+    background-color: #C2E0E0;
+    padding: 20px 0;
+    color: #284F60;
+}
+
+.apoia_doadores h2 {
+    margin: 0;
+    color: #284F60;
+}
+
+.apoia_doador {
+    display: flex;
+    margin: 20px 0;
+    padding: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.apoia_doador img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    margin-right: 20px;
+}
+
+.apoia_doador-info {
+    flex: 1;
+    font-size: 1.2em;
+    color: #284F60;
+}
+
+.apoia_doador-info h3 {
+    margin-top: 0;
+    color: #284F60;
+}
+
+.apoia_juntos {
+    text-align: center;
+    padding: 20px 0;
+    color: #284F60;
+}
+
+.apoia_juntos h2 {
+    margin: 0;
+    color: #284F60;
+}
+
+.apoia_buttons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.apoia_button-container, 
+.apoia_button-container2 {
+    text-align: center;
+    width: 45%;
+    background-color: #C2E0E0;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.apoia_button-container2 {
+    background-color: #D33741;
+}
+
+.apoia_button-container p {
+    margin-bottom: 40px;
+    color: #284F60;
+}
+
+.apoia_button-container2 p {
+    color: #FFFFFF;
+}
+
+.apoia_button {
+    background-color: #D33741;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    border-radius: 60px;
+    text-align: center;
+}
+
+.apoia_button.apoia_red {
+    background-color: #284F60;
+    color: #FFFFFF;
+}
+
+.apoia_button:hover {
+    opacity: 0.8;
+}
+
+.apoia_separator {
+    border: 0;
+    height: 7px;
+    background: #346F88;
+    margin: 40px 0;
+}
+
+/*Responsividade do site*/
+@media (max-width: 768px) {
+    .apoia_doador {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .apoia_doador img {
+        margin: 0 0 20px 0;
+    }
+
+    .apoia_button-container,
+    .apoia_button-container2 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .apoia_button {
+        padding: 10px 15px;
+    }
+
+    .apoia_doador-info {
+        font-size: 1em;
+    }
+}

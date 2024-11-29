@@ -1,0 +1,127 @@
+.login__container {
+  height: 100vh;
+  width: 100vw;
+  background-color: #d33741;
+}
+
+.login__container input {
+}
+
+.login__container h1 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.login__user_type  {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.login__wrapper {
+  width: 70%;
+  height: fit-content;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 24px;
+  box-shadow: 3px 3px 9px rgb(95, 16, 16);
+  background-color: rgba(189, 28, 38, 1);
+  padding: 4rem 2rem;
+}
+
+.login__wrapper img {
+  width: 12%;
+}
+
+.login__form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.login__form_input_container {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.login__form_input_container input {
+  background-color: rgb(240, 240, 240);
+
+  border-radius: 8px;
+  border-style: solid;
+  border-color: rgb(191, 197, 202);
+  border-width: 1px;
+
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+.login__form_check_container {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 1.125rem;
+}
+
+.login__form_check_container a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.login__form_check_container > div {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.login__form_confirm_button {
+  margin-top: 1rem;
+
+  width: 9rem;
+  height: 3rem;
+
+  border-width: 2px;
+  border-radius: 24px;
+  border-color: white;
+  border-style: solid;
+
+  background-color: rgb(189, 28, 38);
+  color: white;
+
+  font-size: 1.125rem;
+  font-weight: 600;
+  width: 100%;
+  transition: all 0.2s;
+}
+
+.login__form_confirm_button:hover {
+  transform: scale(1.05);
+}
+
+.login__link_to_signup {
+  color: white;
+  margin-top: 1rem;
+  text-decoration: underline;
+  font-size: 1.125rem;
+}
+
+.login__error_message {
+  color: white;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+
+.password_info {
+  color: white;
+  font-size: 1.25rem;
+  margin-top: 5px;
+}

@@ -1,0 +1,72 @@
+.collection-point-edit-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .collection-point-edit-title {
+    text-align: center;
+    color: #cc0000;
+    margin-bottom: 20px;
+  }
+  
+  .collection-point-edit-form {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .collection-point-edit-form div {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  .collection-point-edit-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .collection-point-edit-form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .collection-point-edit-submit-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #cc0000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+  
+  .collection-point-edit-submit-button:hover {
+    background-color: #990000;
+  }
+  
+  .collection-point-edit-back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    width:100%;
+  }
+  
+  .collection-point-edit-back-link:hover {
+    background-color: #990000;
+  }
+  

@@ -1,0 +1,109 @@
+<div class="row">
+    <nav class="navbar navbar-expand-lg bg-body-danger" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Horizon</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/profile">
+                            Perfil
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/screening">
+                            Agendar
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/my-schedules">Meus Agendamentos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="triagem__body">
+    <div class="triagem">
+        <h1>Você está prestes a salvar 4 vidas!</h1>
+        <p>Por favor, responda as perguntas da triagem para prosseguir</p>
+        <form id="binaryForm" onsubmit="validarFormulario(event)">
+            <div class="form-group">
+                <div class="option-label">Doou sangue há menos de 2 meses?</div>
+                <div class="option-inputs">
+                    <label><input type="radio" name="option1" value="sim"> Sim</label>
+                    <label><input type="radio" name="option1" value="nao"> Não</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="option-label">Fez procedimento dentário ou limpeza com anestesia local há menos de 3 dias?
+                </div>
+                <div class="option-inputs">
+                    <label><input type="radio" name="option2" value="sim"> Sim</label>
+                    <label><input type="radio" name="option2" value="nao"> Não</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="option-label">Fez exame / procedimento endoscópico há menos de 6 meses?</div>
+                <div class="option-inputs">
+                    <label><input type="radio" name="option3" value="sim"> Sim</label>
+                    <label><input type="radio" name="option3" value="nao"> Não</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="option-label">Teve infecção pelo SARS COV-2 há menos de 10 dias?</div>
+                <div class="option-inputs">
+                    <label><input type="radio" name="option4" value="sim"> Sim</label>
+                    <label><input type="radio" name="option4" value="nao"> Não</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="option-label">Fez acupuntura em procedimento não seguro há menos de 06 meses?</div>
+                <div class="option-inputs">
+                    <label><input type="radio" name="option5" value="sim"> Sim</label>
+                    <label><input type="radio" name="option5" value="nao"> Não</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="option-label">Teve hepatite ou icterícia após 11 anos de idade?</div>
+                <div class="option-inputs">
+                    <label><input type="radio" name="option6" value="sim"> Sim</label>
+                    <label><input type="radio" name="option6" value="nao"> Não</label>
+                </div>
+            </div>
+            <div class="confirm-group">
+                <input type="checkbox" id="confirmCheckbox" required>
+                <label for="confirmCheckbox">Declaro que as respostas fornecidas acima são verdadeiras</label>
+            </div>
+            <button type="submit">Agendar Doação</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function validarFormulario(event) {
+        event.preventDefault(); // Impede o envio do formulário
+
+        const options = document.querySelectorAll('input[type="radio"]:checked');
+        let temSim = false;
+
+        options.forEach(option => {
+            if (option.value === 'sim') {
+                temSim = true;
+            }
+        });
+
+        const checkbox = document.getElementById('confirmCheckbox');
+
+        if (temSim) {
+            alert('Você não pode agendar uma doação por um dos problemas citados abaixo.');
+            return; // Impede o redirecionamento se houver 'sim'
+        }
+
+        if (checkbox.checked) {
+            window.location.href = '/schedule'; // Redireciona para a página de agendamentos
+        } else {
+            alert('Você deve confirmar que as respostas fornecidas são verdadeiras.');
+        }
+    }
+</script>

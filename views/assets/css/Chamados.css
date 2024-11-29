@@ -1,0 +1,144 @@
+.chamados-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.chamado-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #e0f7fa;
+  padding: 20px;
+  border-radius: 10px;
+  height: 400px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-acoes {
+  background-color: #ff0000;
+  color: white;
+  padding: 10px 80px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 10;
+  align-self: center;
+}
+
+@media (max-width: 768px) {
+  .chamados-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .chamados-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.btn-verificar {
+  background-color: rgb(240, 0, 0);
+  color: white;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.btn-responder {
+  background-color: red;
+  color: white;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.btn-direcionar {
+  background-color: red;
+  color: white;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.imagem-padrao img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.footer-chamados {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 200px;
+  background-color: #f5f5f5;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.footer12 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal {
+  z-index: 1050;
+}
+
+.modal-body .btn {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.modal-body .btn-primary {
+  background-color: #ff0000;
+  border: none;
+}
+
+.modal-body .btn-primary:hover {
+  background-color: #cc0000;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+.input-field:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.btn-submit {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+}

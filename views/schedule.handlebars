@@ -1,0 +1,173 @@
+<div class='home__container agend__body'>
+  <div class='row'>
+    <nav class='navbar navbar-expand-lg bg-body-danger' data-bs-theme='dark'>
+      <div class='container-fluid'>
+        <a class='navbar-brand' href='/'>Horizon</a>
+        <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+          <ul class='navbar-nav me-auto mb-2 mb-lg-0'>
+            <li class='nav-item'>
+              <a class='nav-link' aria-current='page' href='/profile'>
+                Perfil
+              </a>
+            </li>
+            <li class='nav-item'>
+              <a class='nav-link active' aria-current='page' href='/screening'>
+                Agendar
+              </a>
+            </li>
+            <li class='nav-item'>
+              <a class='nav-link' href='/my-schedules'>Meus Agendamentos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <main class='agend_principal'>
+    <div
+      style='width: 45%; padding: 3%; align-items: center; justify-content: center; text-align: center;'
+    >
+          <h1>Agende sua doação</h1>
+      <div class='lado_esquerdo'>
+        <form id="scheduleForm" class="schedule__form" action='/schedule' method='post'>
+          <div class='mb-3 text-start'>
+            <label class='form-label'>Data para agendamento:</label>
+            <input
+              type='date'
+              name='date_scheduled'
+              class='form-control'
+              id='date_scheduled'
+              aria-describedby='emailHelp'
+               min="{{currentDate}}"
+              required
+            />
+          </div>
+          <div class='mb-3 text-start'>
+            <label class='form-label'>Horário:</label>
+            <select
+              name='time_scheduled'
+              class='form-select'
+              aria-label='Default select example'
+              required
+            >
+              <option value='09:00:00' selected>09:00</option>
+              <option value='10:00:00'>10:00</option>
+              <option value='11:00:00'>11:00</option>
+              <option value='12:00:00'>12:00</option>
+              <option value='13:00:00'>13:00</option>
+              <option value='14:00:00'>14:00</option>
+              <option value='15:00:00'>15:00</option>
+            </select>
+          </div>
+          <div class='mb-3 text-start'>
+            <label class='form-label'>Ponto de Coleta:</label>
+            <select name='collection_point_id' class='form-select' required>
+              {{#each collectionPoints}}
+                <option value='{{this.id}}'>{{this.name}}
+                  -
+                  {{this.address}}</option>
+              {{/each}}
+            </select>
+          </div>
+          <input
+            type='submit'
+            value='Agendar'
+            class='schedule__submit_button'
+            id="submitSchedule"
+          />
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal de Erro -->
+<div id="scheduleErrorModal" class="schedule__error_modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p id="errorMessage">Erro ao agendar. Por favor, corrija os campos e tente novamente.</p>
+  </div>
+</div>
+
+
+
+    <div style="width: 40%; padding: 3%; text-align: center; margin: auto;">
+      <h1>Encontre os pontos de coleta mais próximos</h1>
+      <div
+        class="agend_quadrado"
+        style="margin-bottom: -3%; align-self: center; position: relative; width: 100%; padding-top: 56.25%; overflow: hidden; border: 1px solid #ccc; border-radius: 8px;"
+      >
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7306.271698989194!2d-46.6115275085995!3d-23.706842295116502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5d3a66c9d42b%3A0x71b33b4637e2799c!2sHospital%20Estadual%20de%20Diadema!5e0!3m2!1spt-BR!2sbr!4v1718237893807!5m2!1spt-BR!2sbr"
+          style="border: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+<script>
+  // Função para exibir o modal com a mensagem de erro
+function showErrorModal(errorMessage) {
+  const modal = document.getElementById('scheduleErrorModal');
+  const messageElement = document.getElementById('errorMessage');
+  messageElement.textContent = errorMessage;
+  modal.style.display = 'block';
+}
+
+// Fechar modal ao clicar no "X"
+document.querySelector('.schedule__error_modal .close').addEventListener('click', function () {
+  document.getElementById('scheduleErrorModal').style.display = 'none';
+});
+
+// Fechar modal ao clicar fora do conteúdo
+window.addEventListener('click', function (event) {
+  const modal = document.getElementById('scheduleErrorModal');
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+
+// Envio do formulário com prevenção de duplicação
+document.getElementById('submitSchedule').addEventListener('click', async function (event) {
+  event.preventDefault(); // Previne o envio padrão do formulário
+
+  const form = document.getElementById('scheduleForm');
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData);
+
+try {
+  const response = await fetch('/schedule', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+
+  if (!response.ok) {
+    // Se a resposta não for 200-299, exibe o erro
+    const text = await response.text(); // Tenta capturar a mensagem
+    throw new Error(text || 'Erro desconhecido.');
+  }
+
+  const result = await response.json();
+
+  if (result.error) {
+    showErrorModal(result.error);
+  } else {
+    window.location.href = '/my-schedules';
+  }
+} catch (error) {
+  console.error('Erro inesperado:', error);
+  showErrorModal(error.message || 'Ocorreu um erro inesperado. Tente novamente mais tarde.');
+}
+);
+
+
+
+</script>
+

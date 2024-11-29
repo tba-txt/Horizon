@@ -1,0 +1,77 @@
+.triagem__body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.triagem {
+    background-color: #D33741;
+    width: 60%;
+    margin: 64px auto 32px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+
+}
+
+.triagem h1 {
+    color: #284F60;
+}
+
+.triagem p {
+    color: #284F60;
+}
+
+.triagem .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #d0e8f2;
+    padding: 15px;
+}
+
+.triagem .option-label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #284F60;
+}
+
+.triagem .option-inputs {
+    display: flex;
+    gap: 20px;
+}
+
+.triagem label {
+    font-weight: normal;
+    color: #284F60;
+}
+
+.triagem button {
+    padding: 15px 30px;
+    background-color: #D33741;
+    color: #fff;
+    border: none;
+    border-radius: 27px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.triagem button:hover {
+    background-color: #cc0000;
+}
+
+.triagem .confirm-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.triagem .confirm-group input {
+    margin-right: 10px;
+}

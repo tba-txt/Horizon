@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Chamados</title>
+   <link rel="stylesheet" href="/assets/css/Suporte.css"/>
+    <link rel="stylesheet" href="/assets/css/Chamados.css"/>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="apple-touch-icon" sizes="180x180" href="/views/assets/images/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="/views/assets/images/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="/views/assets/images/favicon-16x16.png">
+   <link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+<body>
+  <div class=''>
+  <nav class='navbar'>
+    <a href='' class='navbar__logo_a'>
+      <img
+        src='/assets/images/logo.png'
+        alt='Desenho da logo da Horizon, uma gota de sangue com Horizon escrito ao lado'
+        class='navbar__logo_img'
+      /></a>
+
+    <div class='nav-item dropdown navbar__avatar_container'>
+      <a
+        class='nav-link dropdown-toggle'
+        href='#'
+        id='navbarDropdownMenuLink'
+        role='button'
+        data-bs-toggle='dropdown'
+        aria-expanded='false'
+      >
+        <i style='font-size: 250%; color: white' class='fa-regular fa-user'></i>
+      </a>
+      <ul class='dropdown-menu'>
+      <li><a class="dropdown-item" href="/suporte">Inicio</a></li>
+      <li><a class="dropdown-item" href="/Chamados">Chamados</a></li>
+      <li><a class="dropdown-item" href="/login">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+  <div id="futuro" class="futuro-container">
+    <img src="assets/images/Futuro.png" alt="Construímos o futuro juntos" class="futuro-img" />
+  </div>
+
+  <div class="retangulo">
+    <p><strong>Chamados Horizon</strong></p>
+  </div>
+
+
+<div class="chamados-container">
+  {{#if chamados.length}}
+    {{#each chamados}}
+      <div class="chamado-card">
+        <h3>Chamado #{{this.id1}}</h3>
+        <p><strong>Tipo de Chamado {{this.tipoChamado}}</strong></p>
+        <p>{{this.descricao}}</p>
+        {{#if this.foto}}
+          <img src="data:image/jpeg;base64,{{toBase64 this.foto}}" alt="Imagem do Chamado" class="chamado-imagem" style="display: none;" />
+        {{/if}}
+
+        <!-- Botão "Ações" para abrir o modal -->
+        <button class="btn-acoes" data-toggle="modal" data-target="#acoesModal-{{this.id1}}">
+          Ações
+        </button>
+      </div>
+
+<!-- Modal de Ações -->
+<div class="modal fade" id="acoesModal-{{this.id1}}" tabindex="-1" role="dialog" aria-labelledby="acoesModalLabel-{{this.id1}}" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="acoesModalLabel-{{this.id1}}">Ações do Chamado #{{this.id1}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <button onclick="mostrarImagemModal('{{toBase64 this.foto}}', '{{this.id1}}')" class="btn btn-primary">Verificar Imagem</button>
+        <!-- Formulário para responder chamado -->
+        <form id="email-form" action="/send-email/{{id1}}" method="POST">
+          <input class="input-field" type="text" name="name" placeholder="Nome do destinatário" required />
+          <input class="input-field" type="email" name="email" placeholder="E-mail do destinatário" required />
+          <textarea class="input-field" name="message" rows="5" placeholder="Escreva sua mensagem" required></textarea>
+          <button class="btn btn-danger delete-chamado" type="submit">Enviar resposta</button>
+        </form>
+
+
+
+        <button class="btn btn-danger delete-chamado" data-id="{{id1}}">Excluir chamado</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    {{/each}}
+  {{else}}
+    <div class="chamado-padrao">
+      <img src="/assets/images/Break2.png" alt="Nenhum chamado disponível" class="imagem-padrao">
+    </div>
+  {{/if}}
+</div>
+
+<!-- Modal para Exibir a Imagem -->
+<div class="modal fade" id="imagemModal" tabindex="-1" role="dialog" aria-labelledby="imagemModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="imagemModalLabel">Imagem do Chamado</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img id="modalImagem" src="" alt="Imagem do Chamado" style="width: 100%;" />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Footer -->
+<div id="footer" class="footer-chamados">
+  <img class="footer12" alt="Footer da página" src="/assets/images/footer.png"/>
+</div>
+
+
+
+<script>
+document.querySelectorAll('.delete-chamado').forEach(button => {
+  button.addEventListener('click', async () => {
+    const id1 = button.getAttribute('data-id');
+
+    const confirmDelete = confirm('Tem certeza que deseja seguir com esta ação?');
+    if (!confirmDelete) return;
+
+    try {
+      const response = await fetch(`/delete-chamado/${id1}`, {
+        method: 'DELETE'
+      });
+
+      if (response.ok) {
+        alert('Chamado excluído com sucesso!');
+        location.reload(); // Atualiza a página para refletir a exclusão
+      } else {
+        const error = await response.text();
+
+      }
+    } catch (err) {
+
+      alert('Erro ao excluir chamado.');
+    }
+  });
+});
+
+
+</script>
+
+
+<script>
+  function mostrarImagem(button) {
+    const foto = button.previousElementSibling;
+    if (foto.style.display === "none") {
+      foto.style.display = "block";
+      button.textContent = "Ocultar Imagem";
+    } else {
+      foto.style.display = "none";
+      button.textContent = "Verificar chamado";
+    }
+  }
+
+
+
+
+function responderChamado(chamadoId) {
+  // Lógica para responder ao chamado
+  alert('Respondendo ao Chamado #' + chamadoId);
+}
+
+function direcionarCaso(chamadoId) {
+  // Lógica para direcionar o caso
+  alert('Direcionando o Chamado #' + chamadoId);
+}
+
+</script>
+
+<script>
+  function mostrarImagemModal(imagemBase64, chamadoId) {
+    // Fecha o modal de ações antes de abrir o modal de imagem
+    $('#acoesModal-' + chamadoId).modal('hide');  // Fecha o modal de ações específico para o chamado
+
+    // Agora, abre o modal de imagem
+    const modalImagem = document.getElementById('modalImagem');
+    modalImagem.src = `data:image/jpeg;base64,${imagemBase64}`;
+    $('#imagemModal').modal('show');  // Exibe o modal de imagem
+  }
+
+  // Funções para as ações dos botões
+  function responderChamado(chamadoId) {
+    // Lógica para responder ao chamado
+    alert('Respondendo ao Chamado #' + chamadoId);
+  }
+
+  function direcionarCaso(chamadoId) {
+    // Lógica para direcionar o caso
+    alert('Direcionando o Chamado #' + chamadoId);
+  }
+</script>
+
+
+<script>
+  function mostrarImagemModal(imagemBase64) {
+    const modalImagem = document.getElementById('modalImagem');
+    modalImagem.src = `data:image/jpeg;base64,${imagemBase64}`;
+    $('#imagemModal').modal('show');
+  }
+</script>
+
+
+<script src="/assets/js/scripts.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

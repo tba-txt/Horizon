@@ -1,0 +1,119 @@
+<nav class="navbar">
+  <a href="/" class="navbar__logo_a">
+    <img src="/assets/images/logo.png" alt="Desenho da logo da Horizon, uma gota de sangue com Horizon escrito ao lado" class="navbar__logo_img" />
+  </a>
+
+  <!-- Menu Toggle Button (aparece em telas pequenas) -->
+  <div class="navbar__menu_toggle" id="menu-toggle">
+    <i class="fa fa-bars"></i>
+  </div>
+
+  <div class="navbar__links" id="navbar-links">
+    <a href="/" class="navbar__link">Home</a>
+    <a href="/mitos" class="navbar__link">Mitos</a>
+    <a href="/beneficios" class="navbar__link">Benefícios</a>
+    <a href="/contato" class="navbar__link">Contato</a>
+    <a href="/apoiadores" class="navbar__link">Apoiadores</a>
+  </div>
+
+  <div class="nav-item dropdown navbar__avatar_container">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i style="font-size: 250%; color: white" class="fa-regular fa-user"></i>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="/login">Login/Cadastro Doador</a></li>
+      <li><a class="dropdown-item" href="/collection-point/login">Login/Cadastro Ponto de Coleta</a></li>
+      <li><a class="dropdown-item" href="/login">Logout</a></li>
+      <li><a class='dropdown-item' href='/my-schedules'>Meus agendamentos</a></li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  // Mostrar/Esconder o menu em dispositivos móveis
+  const menuToggle = document.getElementById('menu-toggle');
+  const navbarLinks = document.getElementById('navbar-links');
+  
+  menuToggle.addEventListener('click', function() {
+    navbarLinks.classList.toggle('show');
+  });
+</script>
+
+
+<div class="apoia_corpo">
+    <div class="apoia_container">
+        <section style="margin-top: 6%;" class="apoia_doadores">
+            <h2>Doadores</h2>
+            <p>Graças a cada um de vocês, temos o potencial de salvar 3.720 vidas!</p>
+        </section>
+
+        <div class="apoia_doador">
+            <img src="assets/images/beecrowd_da_silva.webp" alt="Beecrowd da Silva">
+            <div class="apoia_doador-info">
+                <h3>Beecrowd da Silva, 34</h3>
+                <p>“Doei sangue pela primeira vez. Foi uma experiência única, cheia de emoções. No começo, confesso que
+                    estava um pouco nervoso, mas a equipe foi tão acolhedora que logo me senti confortável. Ver o
+                    sorriso no
+                    rosto dos voluntários e saber que minha doação pode fazer a diferença na vida de até 4 pessoas é uma
+                    sensação indescritível.”</p>
+            </div>
+        </div>
+
+        
+
+        <hr class="apoia_separator">
+
+<div class="apoia_corpo">
+<div class="apoia_container">
+
+<div class="apoia_buttons">
+            <div class="apoia_button-container">
+                <p>Venha você também fazer história junto com a gente! Se torne um doador clicando no botão abaixo</p>
+                <a href="screening" class="apoia_button">Agendar Doação</a>
+            </div>
+            <div class="apoia_button-container2">
+                <p>Caso você possua interesse em saber mais sobre o software HORIZON e sobre como se tornar uma das
+                    instituições cadastradas, clique no botão abaixo</p>
+                <a href="collection-point/signup" class="apoia_button apoia_red">Quero me cadastrar como instituição</a>
+            </div>
+        </div>
+
+</div>
+</div>
+
+
+    </div>
+</div>
+    <footer class="benef_footer">
+      <div style="width: 90%;">
+        <h1>HORIZON</h1>
+        <div class="benef_div_a">
+          <a href="apoiadores"
+            style="border-style: none none none solid; border-width: 1px; padding-left: 1%; width: 33%; color: white;">
+            Apoiadores
+          </a>
+          <a href="mitos"
+            style="border-style: none none none solid; border-width: 1px; padding-left: 1%; width: 33%; color: white;">
+            Noticias sobre doação
+          </a>
+          <a href="beneficios"
+            style="border-style: none none none solid; border-width: 1px; padding-left: 1%; width: 33%; color: white;">
+            Benefícios
+          </a>
+        </div>
+        <div style="border-style: none;" class="benef_div_a">
+          <a href="screening"
+            style="border-style: none none none solid; border-width: 1px; padding-left: 1%; width: 33%; color: white;">
+            Quero fazer uma doação!
+          </a>
+          <a href="contato"
+            style="border-style: none none none solid; border-width: 1px; padding-left: 1%; width: 33%; color: white;">
+            Meios de contato
+          </a>
+          <a href="contato"
+            style="border-style: none none none solid; border-width: 1px; padding-left: 1%; width: 33%; color: white;">
+            Perguntas frequentes
+          </a>
+        </div>
+      </div>
+    </footer>

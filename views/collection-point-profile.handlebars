@@ -1,0 +1,41 @@
+<div class="row">
+  <nav class="navbar navbar-expand-lg bg-body-danger" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="">Horizon</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/collection-point/profile">
+              Perfil
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/collection-point/dashboard">
+              Dashboard
+            </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/collection-point/logout">
+              Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="collection-point-profile-container">
+  <h1 class="collection-point-profile-title">Perfil do Ponto de Coleta</h1>
+  <div class="collection-point-profile-info">
+    <p><strong>ID:</strong> {{collectionPoint.id}}</p>
+    <p><strong>Nome:</strong> {{collectionPoint.name}}</p>
+    <p><strong>CNPJ:</strong> {{collectionPoint.cnpj}}</p>
+    <p><strong>Email:</strong> {{collectionPoint.email}}</p>
+    <p><strong>CEP:</strong> {{collectionPoint.cep}}</p>
+    <p><strong>Endereço:</strong> {{collectionPoint.address}}</p>
+  </div>
+  <a href="/collection-point/profile/edit" class="collection-point-profile-edit-link">Editar Perfil</a>
+</div>

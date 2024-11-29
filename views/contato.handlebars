@@ -1,0 +1,263 @@
+<nav class="navbar">
+  <a href="/" class="navbar__logo_a">
+    <img src="/assets/images/logo.png" alt="Desenho da logo da Horizon, uma gota de sangue com Horizon escrito ao lado" class="navbar__logo_img" />
+  </a>
+
+  <!-- Menu Toggle Button (aparece em telas pequenas) -->
+  <div class="navbar__menu_toggle" id="menu-toggle">
+    <i class="fa fa-bars"></i>
+  </div>
+
+  <div class="navbar__links" id="navbar-links">
+    <a href="/" class="navbar__link">Home</a>
+    <a href="/mitos" class="navbar__link">Mitos</a>
+    <a href="/beneficios" class="navbar__link">Benefícios</a>
+    <a href="/contato" class="navbar__link">Contato</a>
+    <a href="/apoiadores" class="navbar__link">Apoiadores</a>
+  </div>
+
+  <div class="nav-item dropdown navbar__avatar_container">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i style="font-size: 250%; color: white" class="fa-regular fa-user"></i>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="/login">Login/Cadastro Doador</a></li>
+      <li><a class="dropdown-item" href="/collection-point/login">Login/Cadastro Ponto de Coleta</a></li>
+      <li><a class="dropdown-item" href="/login">Logout</a></li>
+      <li><a class='dropdown-item' href='/my-schedules'>Meus agendamentos</a></li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  // Mostrar/Esconder o menu em dispositivos móveis
+  const menuToggle = document.getElementById('menu-toggle');
+  const navbarLinks = document.getElementById('navbar-links');
+  
+  menuToggle.addEventListener('click', function() {
+    navbarLinks.classList.toggle('show');
+  });
+</script>
+
+
+  <main class="principal_contatos">
+    <div class="area_contatos">
+      <h1 style="color: rgb(189, 28, 38); margin: 10%;">Perguntas Frequentes</h1>
+      <div class="card_contatos">
+        <i class="fa-solid fa-envelope"></i>
+        <div style="display: flex; flex-direction: column;">
+          <h4 style="font-weight: 700; margin: 0px; color: rgb(189, 28, 38);">E-mail</h4>
+          <p style="margin: 1%;">horizoncostumersucess@gmail.com</p>
+        </div>
+      </div>
+      <div class="card_contatos">
+        <i class="fa-solid fa-phone"></i>
+        <div style="display: flex; flex-direction: column;">
+          <h4 style="font-weight: 700; margin: 0px; color: rgb(189, 28, 38);">Telefone</h4>
+          <p style="margin: 1%; width: 100%;">+55 11 98431-0165</p>
+        </div>
+      </div>
+      <div class="card_contatos">
+        <i class="fa-solid fa-message"></i>
+        <div style="display: flex; flex-direction: column;"></div>
+        <h4 style="font-weight: 700; margin: 0px; color: rgb(189, 28, 38);">Redes sociais</h4>
+        <p style="margin: 1%; width: 100%;"></p>
+      </div>
+    </div>
+  
+
+    <div class="faq">
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                Tenho que pagar algo? <i class="fa-solid fa-angle-down"></i>
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              O software é 100% gratuíto! Não é necessário realizar nenhum pagamento para realizar doações.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                aria-expanded="false" aria-controls="collapseTwo">
+                Não consigo localizar minhas doações
+                <i class="fa-solid fa-angle-down"></i>
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              O histórico de doações fica localizado na página inicial, ok? Caso você não consiga localizar uma doação
+              realizada, por favor, entre em contato com o nosso time de suporte.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+                aria-expanded="false" aria-controls="collapseThree">
+                Não encontro locais para doação
+                <i class="fa-solid fa-angle-down"></i>
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+              Compreendemos a sua solicitação. Como o CONEXSP ainda é novo, pode ser que ainda não tenha um hospital ou
+              posto de coleta próximo de sua região que utilize o nosso software. Mas fique tranquilo, pois estamos
+              trabalhando para expandir ainda mais!
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingFour">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour"
+                aria-expanded="false" aria-controls="collapseFour">
+                Como cadastro meu Hospital?
+                <i class="fa-solid fa-angle-down"></i>
+              </button>
+            </h5>
+          </div>
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+            <div class="card-body">
+              Para cadastrar a sua instituição é muito simples! Basta preencher todos os dados que solicitamos na página
+              inicial. Em até 7 dias úteis um de nossos analistas entrará em contato com você :)
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+
+      <h5 class="mb-0">
+        Não encontrou sua dúvida? Manda pra gente!
+      </h5>
+      <button class="btn btn-danger" id="openModalButton" >Abrir chamado</button>
+         </div>
+  </main>
+
+        <div class="modal fade" id="chamadoModal" tabindex="-1" aria-labelledby="chamadoModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <form id="chamadoForm" action="/abrir-chamado" method="POST" enctype="multipart/form-data">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="chamadoModalLabel">Escolha o Tipo de Chamado</h5>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                <div class="form-group1">
+                  <label for="metodoChamado">Escolha o tipo de chamado</label>
+                  <select class="form-control" id="metodoChamado" name="metodoChamado" required>
+                    <option value="">Selecione o tipo de chamado</option>
+                    <option value="101 - Problema ao agendar doação">Problema ao agendar doação</option>
+                    <option value="102 - Hospital não encontrado para agendamento">Hospital não encontrado para agendamento</option>
+                    <option value="103 - Erro: 'Oops, contate a administração'">Erro: "Oops, contate a administração"</option>
+                    <option value="104 - Agendamentos realizados não estão visíveis">Agendamentos realizados não estão visíveis</option>
+                    <option value="501 - Erro 501 ao tentar cancelar um agendamento">Erro 501 ao tentar cancelar um agendamento</option>
+                    <option value="404 - Erro 404 ao modificar dados do usuário">Erro 404 ao modificar dados do usuário</option>
+                    <option value="105 - Sugestão de melhoria">Sugestão de melhoria</option>
+                    <option value="106 - Doação agendada, porém hospital informa não possuir vagas">Doação agendada, porém hospital informa não possuir vagas</option>
+                    <option value="107 - Erro não documentado">Erro não documentado</option>
+                    <option value="108 - Não consegui doar por demora do hospital">Não consegui doar por demora do hospital</option>
+                    <option value="109 - Quero mais informações sobre o projeto Horizon">Quero mais informações sobre o projeto Horizon</option>
+                    <option value="110 - Realizei a doação, porém não consta em histórico">Realizei a doação, porém não consta em histórico</option>
+                    <option value="111 - Sou Administrador de hospital e desejo cadastrar meu hospital no sistema">Sou Administrador de hospital e desejo cadastrar meu hospital no sistema</option>
+                  </select>
+                </div>
+                <div class="form-group1">
+                  <label for="descricaoChamado">Detalhe o ocorrido</label>
+                  <textarea class="form-control" id="descricaoChamado" name="descricaoChamado" rows="3" placeholder="Descreva o problema aqui..." required>E-mail de contato: /
+
+Telefone: /
+
+Melhor horário para contato: /
+
+Nome completo: /
+
+Descreva o ocorrido com detalhes: </textarea>
+                </div>
+                <div class="form-group1">
+                  <label for="fotoChamado">Insira uma foto (opcional)</label>
+                  <input type="file" class="form-control-file" id="fotoChamado" name="fotoChamado" accept="image/*">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-danger">Enviar chamado</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+
+  <script src="scripts.js"></script>
+<script>
+// Abrir o modal ao clicar no botão
+document.getElementById('openModalButton').addEventListener('click', function () {
+  var modal = new bootstrap.Modal(document.getElementById('chamadoModal'));
+  modal.show();
+});
+
+// Submissão do formulário
+document.getElementById('chamadoForm').addEventListener('submit', async function (event) {
+  event.preventDefault(); // Impede o envio tradicional do formulário
+
+  const formData = new FormData(this); // Cria um objeto FormData com os dados do formulário
+
+  try {
+    // Envia a requisição para o servidor com os dados do formulário
+    const response = await fetch('/abrir-chamado', {
+      method: 'POST',
+      body: formData
+    });
+
+    // Se o chamado for aberto com sucesso
+    if (response.ok) {
+      // Exibe o alerta de sucesso
+      alert('Chamado aberto com sucesso!');
+
+      // Fechar o modal usando a API do Bootstrap 5
+      var modalElement = document.getElementById('chamadoModal');
+      var modal = bootstrap.Modal.getInstance(modalElement);
+      modal.hide();  // Fecha o modal
+
+      // Recarrega a página após exibir o alerta
+      location.reload(); // Isso vai atualizar a página
+    } else {
+      throw new Error('Erro ao abrir o chamado');
+    }
+  } catch (error) {
+    console.error('Erro:', error);
+  }
+});
+
+
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+
+
+</body>
+
+</html>
